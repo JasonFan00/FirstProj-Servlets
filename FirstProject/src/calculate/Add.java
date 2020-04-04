@@ -41,7 +41,6 @@ public class Add extends HttpServlet {
 		pw.println(sc.getInitParameter("MyName"));
 		
 		Object obj = "hello";
-		String obj2 = (String)obj;
 		
 		pw.println("Hello");
 		pw.close();
