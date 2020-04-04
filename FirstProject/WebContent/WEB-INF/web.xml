@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>FirstProject</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>Dispatch</servlet-name>
+  	<servlet-class>calculate.DispatchedServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>AddServlet</servlet-name>
+  	<servlet-class>calculate.Add</servlet-class>
+  	
+  	<init-param>
+	  	<param-name>Greeting</param-name>
+	  	<param-value>Hello World</param-value>
+ 	</init-param>
+ 	
+  </servlet>
+  
+  <context-param>
+  	<param-name>ContextName</param-name>
+  	<param-value>ContextValue</param-value>
+  </context-param>
+  
+  <servlet-mapping>
+  	<servlet-name>AddServlet</servlet-name>
+  	<url-pattern>/yeet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>Dispatch</servlet-name>
+  	<url-pattern>/DispatchedServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app>
